@@ -135,6 +135,14 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  s.static_framework = true
+  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "Alamofire"
+  s.dependency "SQLCipher"
+  s.dependency "Firebase"
+  s.dependency "AEXML"
+  s.dependency "Crashlytics"
+  s.dependency "OpenCV"
+  s.dependency "SwipeCellKit"
 
 end
