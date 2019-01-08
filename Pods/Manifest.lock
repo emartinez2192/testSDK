@@ -1,0 +1,16 @@
+PODS:
+  - Alamofire (4.8.0)
+
+DEPENDENCIES:
+  - Alamofire
+
+SPEC REPOS:
+  http://localhost:8081/artifactory/api/pods/cocoapods-remote:
+    - Alamofire
+
+SPEC CHECKSUMS:
+  Alamofire: 9be45124bc5d3a8ef874e4be1c541dbd2834d506
+
+PODFILE CHECKSUM: 0d01e3e6235b6f52717ed62ff137993cb6f45791
+
+COCOAPODS: 1.5.3
