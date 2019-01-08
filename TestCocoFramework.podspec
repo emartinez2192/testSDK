@@ -64,8 +64,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.ios.deployment_target = "9.0"
-  s.platform     = :ios
+  #s.ios.deployment_target = "9.0"
+  s.platform     = :ios , "9.0"
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
@@ -82,7 +82,7 @@ Pod::Spec.new do |s|
   #
 
   #s.source = { :path => '/Users/eduardomartinez/Desktop/TESTSDKCOCOA/testFramework.tar.gz' }
-   s.source       = { :git => "http://localhost:8081/artifactory/api/pods/cocoapods-remote"}
+   s.source       = { :git => "https://github.com/emartinez2192/testSDK.git"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
