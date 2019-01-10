@@ -26,6 +26,9 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
                    Description of my cocoa touch framework
+                   Description of my cocoa
+                   Description of my
+                   Description of
                    DESC
 
   s.homepage     = "http://EXAMPLE/TestCocoFramework"
@@ -105,8 +108,13 @@ Pod::Spec.new do |s|
   #  target bundle with a build phase script. Anything else will be cleaned.
   #  You can preserve files from being cleaned, please don't preserve
   #  non-essential files like tests, examples and documentation.
-  #
-
+  #xib,storyboard,xcassets
+ # s.resources  = "testFramework" , "testFramework/**/*.{db}"
+  
+ 
+  s.resources = "testFramework/**/*.{db}"
+  
+  #s.resources = 'testFramework/**/*.{png,storyboard,db}'
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -138,11 +146,12 @@ Pod::Spec.new do |s|
   s.static_framework = true
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "Alamofire"
-  s.dependency "SQLCipher"
   s.dependency "Firebase"
   s.dependency "AEXML"
   s.dependency "Crashlytics"
   s.dependency "OpenCV"
   s.dependency "SwipeCellKit"
+  s.dependency "Realm"
+  s.dependency "SQLCipher"
 
 end

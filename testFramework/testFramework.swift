@@ -8,8 +8,7 @@
 
 import Foundation
 import Alamofire
-import SQLCipher
-import SQLite3
+//import SQLCipher
 
 
 
@@ -35,8 +34,48 @@ public class testFramework {
     }
     
     
+    /*
     public func testSQLCipher() {
     
+        //na-at.testFramework
+        var rc: Int32
+        var db: OpaquePointer? = nil
+        let manager = FileManager.default
+        var stmt: OpaquePointer? = nil
+
+        
+        do {
+           let documentsURL = try manager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("testDB.db")
+           let bundleURL = Bundle(identifier: "na-at.testFramework")?.url(forResource: "testDB", withExtension: "db")
+           rc = sqlite3_open_v2(documentsURL.path, &db, SQLITE_OPEN_READWRITE, nil)
+            
+            if (rc != SQLITE_OK) {
+                let errmsg = String(cString: sqlite3_errmsg(db))
+                NSLog("Error opening database: \(errmsg)")
+                return
+            }
+            
+            var is_sqlcipher = false;
+            
+            if(sqlite3_prepare_v2(db, "PRAGMA cipher_version;", -1, &stmt, nil) == SQLITE_OK) {
+                if(sqlite3_step(stmt) == SQLITE_ROW) {
+                    let ver = sqlite3_column_text(stmt, 0);
+                    if(ver != nil) {
+                        is_sqlcipher = true;
+                    }
+                }
+                sqlite3_finalize(stmt);
+            }
+            print("is sqlcipher: \(is_sqlcipher)")
+            
+        }catch{
+            print(error.localizedDescription)
+        }
+       
+    
+       
+        
+        /*
         var rc : Int32
         var db : OpaquePointer?
         var stmt : OpaquePointer?
@@ -48,8 +87,14 @@ public class testFramework {
             return
         }
         
+        
+        
         rc = sqlite3_key(db, password, Int32(password.utf8CString.count))
-            //sqlite3_key(db, password, Int32(password.utf8CString.count))
+        
+        
+        //rc = sqlite3_key(db, password, Int32(password.utf8CString.count))
+        //sqlite3_key(db, password, Int32(password.utf8CString.count)
+        
         if (rc != SQLITE_OK) {
             let errmsg = String(cString: sqlite3_errmsg(db))
             NSLog("Error setting key: \(errmsg)")
@@ -68,9 +113,11 @@ public class testFramework {
         }
         sqlite3_finalize(stmt)
         sqlite3_close(db)
-        
+        */
         
     }
+    */
+    
     
     
     
