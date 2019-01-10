@@ -420,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1106512901FCA3CD0F66D925 /* Pods-testFramework.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "na-at.testFramework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/testFramework\" \"$(SRCROOT)/\"";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 42E23F2DAE071C9A0AA53396 /* Pods-testFramework.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "na-at.testFramework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/testFramework\" \"$(SRCROOT)/\"";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

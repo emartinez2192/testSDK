@@ -15,5 +15,6 @@ FOUNDATION_EXPORT double testFrameworkVersionNumber;
 FOUNDATION_EXPORT const unsigned char testFrameworkVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <testFramework/PublicHeader.h>
+#define SQLITE_HAS_CODEC 1
 
 
